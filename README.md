@@ -10,7 +10,7 @@
 
 用于类上，声明拷贝时需要忽略的字段名，参数为字符串数组，例：
 
-```
+```java
 @IgnoreFields({"d","a"})
 ```
 
@@ -18,7 +18,7 @@
 
 用于字段上，若目标字段与源字段的字段名不一致，就需要该注解来证明目标字段的字段名。例：
 
-```
+```java
 @TransTarget("targetTemp")
 ```
 
@@ -26,7 +26,7 @@
 
 用于字段上，声明拷贝时该字段不需要拷贝到指定的目标类中。例：
 
-```
+```java
 @IgnoreClass(Target.class)
 ```
 
@@ -36,7 +36,7 @@
 
 ## 使用范例
 
-```
+```java
 public class Test {
 
     public static void main(String[] args) throws InvocationTargetException, NoSuchFieldException, IllegalAccessException {
