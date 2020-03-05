@@ -1,6 +1,5 @@
 package object.trans;
 
-import java.io.Serializable;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -37,7 +36,7 @@ public class ObjectTransUtil {
      * @see TransTarget 指定目标变量
      * @since 1.0.0.RELEASE
      */
-    public static <K extends Serializable, V> V transBean(K k, Class<V> vClass) throws IllegalAccessException, InvocationTargetException {
+    public static <K, V> V transBean(K k, Class<V> vClass) throws IllegalAccessException, InvocationTargetException {
         Class<?> kClass = k.getClass();
         List<Field> fieldList = Arrays.asList(kClass.getDeclaredFields());
         // 检查是否标注BeanTrans注解，已过时
